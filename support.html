@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Support & Contact | NanoAgent LLC (nanoagent.app)</title>
+  <meta name="description" content="Official Technical Support and Developer Portal for NanoAgent LLC (nanoagent.app). Apple Developer support, API help desk, and ticket submission.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo">
+        <img src="/favicon.svg" alt="NanoAgent LLC" class="logo-icon-img" />
+        <span>NanoAgent</span>
+        <span class="brand-badge">LLC</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#products">AI Products</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/support.html" class="active">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-btn" aria-label="Language Toggle">🌐 EN / 中文</button>
+        <a href="/" class="btn btn-secondary">Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Support Header & Content -->
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-header" style="text-align: center; border: none; margin-bottom: 2rem;">
+        <span class="section-badge">Developer & Customer Help Desk</span>
+        <h1 class="section-title" style="font-size: 2.8rem;">Technical Support Portal</h1>
+        <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Official Technical Support for NanoAgent LLC (nanoagent.app) AI SaaS Platform & Apple Ecosystem Applications.</p>
+      </div>
+
+      <!-- System Status Bar -->
+      <div style="background: rgba(16, 22, 47, 0.7); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem 2rem; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.8rem;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
+          <strong style="color: white; font-size: 1.05rem;">All AI SaaS Systems Operational (99.99% SLA)</strong>
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+          <span>NanoVision Image API: <strong style="color: #10b981;">Online</strong></span>
+          <span>NanoFrame Video API: <strong style="color: #10b981;">Online</strong></span>
+          <span>NanoVoice Audio API: <strong style="color: #10b981;">Online</strong></span>
+        </div>
+      </div>
+
+      <div class="support-grid">
+        <!-- Contact Form -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Submit Support Ticket</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Have a question regarding our AI SaaS APIs, Apple Developer SDK, or account billing? Submit a ticket below.</p>
+          
+          <form id="support-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" class="form-control" placeholder="e.g. Alex Mercer" required />
+            </div>
+
+            <div class="form-group">
+              <label>Contact Email</label>
+              <input type="email" class="form-control" placeholder="e.g. developer@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label>Inquiry Category</label>
+              <select class="form-control">
+                <option>Apple Developer & CoreML Integration</option>
+                <option>AI SaaS API Key & Rate Limits</option>
+                <option>Billing & Subscription Support</option>
+                <option>Privacy & App Store Review Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message Details</label>
+              <textarea class="form-control" rows="4" placeholder="Describe your technical inquiry or issue in detail..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Technical Ticket</button>
+          </form>
+
+          <div id="support-alert" style="display: none;"></div>
+        </div>
+
+        <!-- FAQ & Direct Contacts -->
+        <div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-cyan);">Direct Support Channels</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-weight: 600; color: white; margin-bottom: 2px;">📧 General & Technical Support</div>
+                <a href="mailto:support@nanoagent.app" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem;">support@nanoagent.app</a>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Average Response Time: &lt; 4 Hours</p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-weight: 600; color: white; margin-bottom: 2px;">🍎 Apple Developer Review Concierge</div>
+                <a href="mailto:developer@nanoagent.app" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">developer@nanoagent.app</a>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">For App Store reviewers & enterprise partners</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frequently Asked Questions -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: white;">Developer FAQ</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div>
+                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: How do I integrate NanoAgent SDK with my iOS / macOS App?</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: You can import our Swift Package (`NanoAgentSDK`) directly via Swift Package Manager (SPM). It supports both cloud inference endpoints and local CoreML package execution.</p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: Does NanoAgent comply with Apple App Store Policy 5.1?</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: Yes, strictly. We offer zero-data-retention options, end-to-end encrypted API requests, and transparent account deletion tools.</p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: What is the corporate identity for billing?</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: All services are operated by <strong>NanoAgent LLC</strong> (registered domain <strong>nanoagent.app</strong>).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div>© 2026 NanoAgent LLC (nanoagent.app). All rights reserved.</div>
+      <div>
+        <a href="/privacy.html" style="color: var(--text-muted); margin-right: 1rem;">Privacy Policy</a>
+        <a href="/terms.html" style="color: var(--text-muted); margin-right: 1rem;">Terms of Service</a>
+        <a href="/support.html" style="color: var(--accent-cyan);">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

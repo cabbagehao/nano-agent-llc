@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | NanoAgent LLC (nanoagent.app)</title>
+  <meta name="description" content="Privacy Policy for NanoAgent LLC (nanoagent.app). Apple App Store Section 5.1 and GDPR compliant privacy terms.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <!-- Canvas Background for Animated Particles -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo">
+        <img src="/favicon.svg" alt="NanoAgent LLC" class="logo-icon-img" />
+        <span>NanoAgent</span>
+        <span class="brand-badge">LLC</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#products">AI Products</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/support.html">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-btn" aria-label="Language Toggle">🌐 EN / 中文</button>
+        <a href="/" class="btn btn-secondary">Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Legal Main Content -->
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-header">
+        <span class="section-badge">Legal & Compliance</span>
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="section-subtitle">Last Updated: August 8, 2026 | Effective for NanoAgent LLC (nanoagent.app) and Apple Ecosystem Applications</p>
+      </div>
+
+      <div class="legal-content">
+        <div class="legal-section">
+          <h3>1. Executive Summary & Corporate Identity</h3>
+          <p>This Privacy Policy applies to all services, software applications, APIs, and websites operated by <strong>NanoAgent LLC</strong> ("Company", "we", "us", or "our"), accessible via <strong>nanoagent.app</strong>. NanoAgent LLC specializes in Artificial Intelligence Software as a Service (AI SaaS), delivering generative image, video, and audio capabilities.</p>
+          <p>We are fully committed to protecting your privacy in strict compliance with the <strong>Apple App Store Review Guidelines (Section 5.1 - Privacy)</strong>, the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and applicable global data security standards.</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>2. On-Device AI & Zero-Data-Retention (Apple CoreML Acceleration)</h3>
+          <p>For applications leveraging our iOS, iPadOS, macOS, and visionOS SDKs built on <strong>Apple CoreML and Metal Performance Shaders</strong>:</p>
+          <ul>
+            <li><strong>Edge AI Inference:</strong> Where supported by device hardware, AI processing occurs entirely on-device within the Apple Neural Engine (ANE). No prompt text, media frames, or audio streams leave your device.</li>
+            <li><strong>Zero Server Data Retention:</strong> For cloud API calls, user inputs (text prompts, source images, audio samples) are processed statelssly in RAM and purged immediately upon inference completion. We do <strong>NOT</strong> store or retain your raw creative inputs.</li>
+            <li><strong>No Model Training on User Data:</strong> NanoAgent LLC explicitly guarantees that your private prompts, generated images, generated videos, or voice clones are <strong>NEVER</strong> used to train, fine-tune, or improve public AI models without your explicit, written opt-in consent.</li>
+          </ul>
+        </div>
+
+        <div class="legal-section">
+          <h3>3. Information We Collect</h3>
+          <p>We limit collection strictly to information required for account authentication, billing, and technical support:</p>
+          <ul>
+            <li><strong>Account Data:</strong> Name, business email address, corporate entity details, and hashed authentication credentials.</li>
+            <li><strong>Billing Data:</strong> Payment details processed securely via PCI-DSS compliant payment gateways. NanoAgent LLC does not directly store credit card numbers.</li>
+            <li><strong>Technical Diagnostics:</strong> Anonymized API telemetry, system status logs, latency metrics, and crash reports to maintain our 99.99% SLA.</li>
+          </ul>
+        </div>
+
+        <div class="legal-section">
+          <h3>4. Data Sharing & Third-Party Disclosure</h3>
+          <p>NanoAgent LLC does <strong>NOT</strong> sell, rent, or monetize personal user data or AI assets to third-party data brokers, advertisers, or analytics agencies. Data may only be shared under the following limited circumstances:</p>
+          <ul>
+            <li>With cloud infrastructure providers bound by strict confidentiality and GDPR data processing agreements (DPAs).</li>
+            <li>When mandated by valid legal process or court order.</li>
+          </ul>
+        </div>
+
+        <div class="legal-section">
+          <h3>5. User Data Rights & App Store Compliance</h3>
+          <p>In alignment with Apple App Store developer requirements, every user possesses full control over their data:</p>
+          <ul>
+            <li><strong>Account Deletion:</strong> You may request complete account and data deletion at any time in-app or by emailing <a href="mailto:privacy@nanoagent.app" style="color: var(--accent-cyan);">privacy@nanoagent.app</a>. Deletion is executed within 7 business days.</li>
+            <li><strong>Data Export:</strong> You can download a complete archive of your account settings, transaction history, and API usage metrics.</li>
+          </ul>
+        </div>
+
+        <div class="legal-section">
+          <h3>6. Contact Information & Privacy Officer</h3>
+          <p>If you have any questions regarding this Privacy Policy or wish to exercise your data privacy rights, please contact our Privacy Team:</p>
+          <div style="background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 1rem;">
+            <p style="margin-bottom: 0.3rem;"><strong>NanoAgent LLC</strong></p>
+            <p style="margin-bottom: 0.3rem;">Official Website: <a href="https://nanoagent.app" style="color: var(--accent-cyan);">https://nanoagent.app</a></p>
+            <p style="margin-bottom: 0.3rem;">Privacy Inquiry Email: <a href="mailto:privacy@nanoagent.app" style="color: var(--accent-cyan);">privacy@nanoagent.app</a></p>
+            <p style="margin-bottom: 0;">Developer Support Email: <a href="mailto:support@nanoagent.app" style="color: var(--accent-cyan);">support@nanoagent.app</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div>© 2026 NanoAgent LLC (nanoagent.app). All rights reserved.</div>
+      <div>
+        <a href="/privacy.html" style="color: var(--accent-cyan); margin-right: 1rem;">Privacy Policy</a>
+        <a href="/terms.html" style="color: var(--text-muted); margin-right: 1rem;">Terms of Service</a>
+        <a href="/support.html" style="color: var(--text-muted);">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
