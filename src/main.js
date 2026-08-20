@@ -157,7 +157,7 @@ function initGenerativeSimulators() {
       `;
       setTimeout(() => {
         imgBox.innerHTML = `
-          <img src="/images/nano_image_ai.jpg" alt="Generated AI Artwork" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);" />
+          <img src="/images/nano_image_ai.webp" width="1376" height="768" decoding="async" alt="Generated AI Artwork" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);" />
           <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #06b6d4; border: 1px solid rgba(6,182,212,0.3);">
             ✓ 8K Ultra HD | Metal CoreML Engine
           </div>
@@ -178,7 +178,7 @@ function initGenerativeSimulators() {
       `;
       setTimeout(() => {
         vidBox.innerHTML = `
-          <img src="/images/nano_video_ai.jpg" alt="Rendered AI Video" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);" />
+          <img src="/images/nano_video_ai.webp" width="1376" height="768" decoding="async" alt="Rendered AI Video" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);" />
           <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #8b5cf6; border: 1px solid rgba(139,92,246,0.3);">
             ▶ NanoFrame Timeline Rendered (4K 60fps)
           </div>
