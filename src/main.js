@@ -1,101 +1,9 @@
 // NanoAgent LLC - Interactive Application Logic
 
-// Language State & Dictionary
-let currentLang = 'en';
-
-const i18n = {
-  en: {
-    nav_products: "AI Products",
-    nav_features: "Core Engine",
-    nav_playground: "Playground",
-    nav_apple: "Apple Developer",
-    nav_pricing: "Pricing",
-    nav_about: "About Us",
-    nav_contact: "Contact & Support",
-    btn_get_started: "Get Started",
-    hero_tag: "Next-Gen AI SaaS Engine for iOS, macOS & Web",
-    hero_title: "Powering the Next Generation of <span class='gradient-text'>Image, Video & Audio AI</span>",
-    hero_desc: "NanoAgent LLC delivers ultra-fast, multi-modal artificial intelligence SaaS solutions. Optimized for Apple Neural Engine & Metal performance.",
-    btn_try_playground: "Try AI Playground",
-    btn_developer_docs: "Developer Portal",
-    apple_native: "Apple Silicon & Metal Accelerated",
-    apple_privacy: "On-Device Privacy & CoreML SDK",
-    stat_latency: "Sub-15ms Latency",
-    stat_creations: "100M+ Media Assets",
-    stat_uptime: "99.99% Uptime",
-    stat_developers: "50,000+ Developers",
-    sec_products_badge: "AI Product Portfolio",
-    sec_products_title: "State-of-the-Art Multi-Modal AI SaaS",
-    sec_products_sub: "Empowering creators and developers with enterprise-grade image, video, and audio generation tools.",
-    img_ai_title: "NanoVision AI (Image Suite)",
-    img_ai_desc: "Photorealistic 8K image generation, real-time background removal, neural upscale, and style synthesis.",
-    vid_ai_title: "NanoFrame AI (Video Studio)",
-    vid_ai_desc: "Text-to-video, temporal frame interpolation, 60fps AI enhancement, and lip-sync video avatar rendering.",
-    aud_ai_title: "NanoVoice AI (Audio Engine)",
-    aud_ai_desc: "Zero-shot voice cloning, neural text-to-speech, spatial audio isolation, and high-fidelity noise cancellation.",
-    playground_title: "Interactive AI Playground",
-    playground_sub: "Experience NanoAgent's high-speed inference engine directly in your browser.",
-    tab_image: "Image Synthesis",
-    tab_video: "Video Generation",
-    tab_audio: "Voice & Speech",
-    btn_generate_img: "Generate Image",
-    btn_generate_vid: "Render Video",
-    btn_generate_aud: "Synthesize Voice",
-    apple_trust_title: "Built for Apple Developer & App Store Standards",
-    apple_trust_desc: "NanoAgent LLC adheres strictly to Apple App Store Guidelines, GDPR, and enterprise privacy standards. Our Swift & Metal SDKs allow zero-latency edge AI integration on iPhone, iPad, Mac, and Apple Vision Pro.",
-    support_ticket_success: "Thank you! Your support ticket #NA-",
-    support_ticket_desc: " has been submitted. Our team responds within 24 hours.",
-    chat_welcome: "Hello! I am NanoAgent AI Assistant. How can I assist you with our AI SaaS platform or Apple integration today?"
-  },
-  zh: {
-    nav_products: "AI 产品阵列",
-    nav_features: "核心引擎",
-    nav_playground: "在线体验",
-    nav_apple: "苹果开发者生态",
-    nav_pricing: "价格方案",
-    nav_about: "关于我们",
-    nav_contact: "技术支持与联系",
-    btn_get_started: "立即体验",
-    hero_tag: "专为 iOS、macOS 和 Web 打造的下一代 AI SaaS 引擎",
-    hero_title: "驱动下一代 <span class='gradient-text'>图像、视频与音频 AI</span> 创新",
-    hero_desc: "NanoAgent LLC 致力于提供极速、多模态的通用人工智能 SaaS 解决方案，深度优化 Apple Neural Engine 与 Metal 硬件加速。",
-    btn_try_playground: "体验 AI 游乐场",
-    btn_developer_docs: "开发者文档",
-    apple_native: "Apple Silicon 与 Metal 硬件加速",
-    apple_privacy: "端侧隐私保护与 CoreML SDK",
-    stat_latency: "低于 15ms 延迟",
-    stat_creations: "生成超 1 亿项媒体内容",
-    stat_uptime: "99.99% 高可用",
-    stat_developers: "50,000+ 开发者使用",
-    sec_products_badge: "AI 产品矩阵",
-    sec_products_title: "前沿多模态 AI SaaS 解决方案",
-    sec_products_sub: "为创作者与开发者赋能企业级图像、视频与音频智能生成工具。",
-    img_ai_title: "NanoVision AI (图像生成)",
-    img_ai_desc: "照片级 8K 图像生成、实时智能抠图、神经网络超分辨率升级与风格转换。",
-    vid_ai_title: "NanoFrame AI (视频工作站)",
-    vid_ai_desc: "文本生成视频、时域帧内插补、60fps AI画质增强与唇形同步数字人渲染。",
-    aud_ai_title: "NanoVoice AI (语音音频引擎)",
-    aud_ai_desc: "零样本声音克隆、神经网络文本转语音、空间音频隔离与高保真降噪处理。",
-    playground_title: "互动 AI 演练中心",
-    playground_sub: "在浏览器中实时体验 NanoAgent 高性能模型推断引擎。",
-    tab_image: "图像合成",
-    tab_video: "视频生成",
-    tab_audio: "语音与音频",
-    btn_generate_img: "开始生成图像",
-    btn_generate_vid: "渲染生成视频",
-    btn_generate_aud: "合成语音音频",
-    apple_trust_title: "严格遵循苹果开发者与 App Store 审核标准",
-    apple_trust_desc: "NanoAgent LLC 严格遵守 Apple App Store 指南、GDPR 及企业级隐私标准。我们的 Swift 与 Metal SDK 可以在 iPhone、iPad、Mac 及 Vision Pro 上提供极速端侧 AI 集成。",
-    support_ticket_success: "提交成功！您的技术支持工单号 #NA-",
-    support_ticket_desc: " 已生成。我们的技术支持团队将在 24 小时内与您联系。",
-    chat_welcome: "您好！我是 NanoAgent AI 助手。请问有什么我可以帮您了解 NanoAgent LLC 的 AI 产品或苹果开发者集成的吗？"
-  }
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   initBackgroundCanvas();
   initNavbarScroll();
-  initLanguageToggle();
+  initMobileNavigation();
   initPlaygroundTabs();
   initGenerativeSimulators();
   initChatWidget();
@@ -192,29 +100,29 @@ function initNavbarScroll() {
   });
 }
 
-/* 3. Language Toggle (EN / ZH) */
-function initLanguageToggle() {
-  const langBtns = document.querySelectorAll('.lang-btn');
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'zh' : 'en';
-      langBtns.forEach(b => b.textContent = currentLang === 'en' ? '🌐 EN / 中文' : '🌐 中文 / EN');
-      applyLanguage(currentLang);
-    });
-  });
-}
+function initMobileNavigation() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.nav-links');
+  if (!toggle || !menu) return;
 
-function applyLanguage(lang) {
-  const dict = i18n[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key]) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = dict[key];
-      } else {
-        el.innerHTML = dict[key];
-      }
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  };
+
+  toggle.addEventListener('click', () => {
+    setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      toggle.focus();
     }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) setOpen(false);
   });
 }
 
@@ -387,11 +295,11 @@ function initChatWidget() {
       
       let reply = "NanoAgent LLC delivers multi-modal AI SaaS (Image, Video, Audio) natively optimized for Apple Silicon, iOS, macOS, and Web APIs. You can explore our Privacy Policy, Support Portal, and API documentation directly from the navigation menu.";
       
-      if (text.toLowerCase().includes('apple') || text.includes('苹果') || text.toLowerCase().includes('ios')) {
+      if (text.toLowerCase().includes('apple') || text.toLowerCase().includes('ios')) {
         reply = "NanoAgent LLC provides native Swift & CoreML SDKs with Metal hardware acceleration, ensuring zero-latency on-device inference for iOS, iPadOS, macOS, and visionOS applications.";
-      } else if (text.toLowerCase().includes('image') || text.includes('图像') || text.includes('图片')) {
+      } else if (text.toLowerCase().includes('image')) {
         reply = "NanoVision AI supports 8K generative image creation, real-time background extraction, depth synthesis, and custom model fine-tuning for enterprises.";
-      } else if (text.toLowerCase().includes('contact') || text.includes('support') || text.includes('联系') || text.includes('支持')) {
+      } else if (text.toLowerCase().includes('contact') || text.includes('support')) {
         reply = "You can contact our support team at support@nanoagent.app or submit a ticket on our Support page. We respond within 24 hours!";
       }
 
@@ -418,14 +326,12 @@ function initSupportForm() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const ticketId = Math.floor(10000 + Math.random() * 90000);
-      const dict = i18n[currentLang];
-      
       if (alertBox) {
         alertBox.style.display = 'block';
         alertBox.innerHTML = `
           <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-top: 1rem;">
-            <strong>${dict.support_ticket_success}${ticketId}</strong><br/>
-            <span>${dict.support_ticket_desc}</span>
+            <strong>Thank you! Your support ticket #NA-${ticketId}</strong><br/>
+            <span> has been submitted. Our team responds within 24 hours.</span>
           </div>
         `;
       }

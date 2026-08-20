@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NanoAgent LLC | Next-Gen AI SaaS Platform for Image, Video & Audio</title>
-  <meta name="description" content="Official website of NanoAgent LLC (nanoagent.app). Enterprise-grade multi-modal AI SaaS platform specializing in Image, Video, Audio generation and Apple CoreML/Metal SDK integration.">
+  <title>NanoAgent LLC | AI Products for Image, Video & Audio</title>
+  <meta name="description" content="NanoAgent LLC builds practical AI products for creators and developers, including LiveFaceSwap AI for real-time face swap, streaming, and video calls.">
   <meta name="keywords" content="NanoAgent, NanoAgent LLC, nanoagent.app, AI SaaS, Image AI, Video AI, Audio AI, Apple Developer, CoreML, Metal API">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nanoagent.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NanoAgent LLC | Next-Gen AI SaaS Platform">
+  <meta property="og:description" content="Explore NanoAgent LLC products, including LiveFaceSwap AI for real-time face swap in browsers, streaming, and video calls.">
+  <meta property="og:url" content="https://nanoagent.app/">
+  <meta property="og:image" content="https://nanoagent.app/images/nanoagent_hero.jpg">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -27,7 +34,7 @@
         <span class="brand-badge">LLC</span>
       </a>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#products" data-i18n="nav_products">AI Products</a></li>
         <li><a href="#playground" data-i18n="nav_playground">Playground</a></li>
         <li><a href="#apple-sdk" data-i18n="nav_apple">Apple Ecosystem</a></li>
@@ -37,7 +44,9 @@
       </ul>
 
       <div class="nav-actions">
-        <button class="lang-btn" aria-label="Language Toggle">🌐 EN / 中文</button>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
         <a href="#playground" class="btn btn-primary" data-i18n="btn_get_started">Get Started</a>
       </div>
     </div>
@@ -133,8 +142,25 @@
       <div class="section-header">
         <span class="section-badge" data-i18n="sec_products_badge">AI Product Portfolio</span>
         <h2 class="section-title" data-i18n="sec_products_title">State-of-the-Art Multi-Modal AI SaaS</h2>
-        <p class="section-subtitle" data-i18n="sec_products_sub">Empowering creators and developers with enterprise-grade image, video, and audio generation tools.</p>
+        <p class="section-subtitle" data-i18n="sec_products_sub">Explore our flagship product and the AI capabilities behind the NanoAgent portfolio.</p>
       </div>
+
+      <article class="flagship-product">
+        <a class="flagship-media" href="https://livefaceswap.ai/" target="_blank" rel="noopener noreferrer" aria-label="Open LiveFaceSwap AI official website">
+          <img src="/images/livefaceswap-ai.jpg" width="1200" height="630" alt="LiveFaceSwap AI real-time face swap product" />
+        </a>
+        <div class="flagship-content">
+          <span class="flagship-label" data-i18n="lfs_label">Flagship Product</span>
+          <h3>LiveFaceSwap AI</h3>
+          <p data-i18n="lfs_desc">Try real-time AI face swap in your browser, then use the Windows desktop app as a virtual camera for OBS, live streaming, and video calls.</p>
+          <ul class="feature-list flagship-features">
+            <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg><span data-i18n="lfs_feature_browser">Real-time browser preview with your webcam</span></li>
+            <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg><span data-i18n="lfs_feature_desktop">Windows desktop app with virtual camera output</span></li>
+            <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg><span data-i18n="lfs_feature_use">Built for OBS, streaming, and video calls</span></li>
+          </ul>
+          <a class="btn btn-primary flagship-cta" href="https://livefaceswap.ai/" target="_blank" rel="noopener noreferrer" data-i18n="lfs_cta">Visit LiveFaceSwap AI</a>
+        </div>
+      </article>
 
       <div class="features-grid">
         <!-- Feature 1: Image AI -->
@@ -401,6 +427,7 @@
         <div class="footer-col">
           <h4>AI SaaS Suite</h4>
           <ul>
+            <li><a href="https://livefaceswap.ai/" target="_blank" rel="noopener noreferrer">LiveFaceSwap AI</a></li>
             <li><a href="#products">NanoVision (Image AI)</a></li>
             <li><a href="#products">NanoFrame (Video Studio)</a></li>
             <li><a href="#products">NanoVoice (Audio Engine)</a></li>
