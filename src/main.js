@@ -325,17 +325,27 @@ function initSupportForm() {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const ticketId = Math.floor(10000 + Math.random() * 90000);
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const category = String(data.get('category') || 'Support request');
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const message = String(data.get('message') || '').trim();
+      const subject = `[NanoAgent Support] ${category}`;
+      const body = [
+        `Name: ${name}`,
+        `Contact email: ${email}`,
+        `Topic: ${category}`,
+        '',
+        message,
+      ].join('\n');
+
       if (alertBox) {
-        alertBox.style.display = 'block';
-        alertBox.innerHTML = `
-          <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-top: 1rem;">
-            <strong>Thank you! Your support ticket #NA-${ticketId}</strong><br/>
-            <span> has been submitted. Our team responds within 24 hours.</span>
-          </div>
-        `;
+        alertBox.textContent = 'Your email app should open now. Review the draft and send it when ready.';
       }
-      form.reset();
+
+      window.location.href = `mailto:support@nanoagent.app?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 }

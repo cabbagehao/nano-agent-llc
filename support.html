@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Support & Contact | NanoAgent LLC (nanoagent.app)</title>
-  <meta name="description" content="Official Technical Support and Developer Portal for NanoAgent LLC (nanoagent.app). Apple Developer support, API help desk, and ticket submission.">
+  <title>NanoAgent Support | Product, Billing & Account Help</title>
+  <meta name="description" content="Contact NanoAgent support for product, account, billing, privacy, or business questions. Prepare the details we need and open a reviewable email draft.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://nanoagent.app/support.html">
+  <link rel="canonical" href="https://nanoagent.app/support">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Developer Support & Contact | NanoAgent LLC">
-  <meta property="og:description" content="Contact NanoAgent LLC for product, developer, and technical support.">
-  <meta property="og:url" content="https://nanoagent.app/support.html">
+  <meta property="og:title" content="NanoAgent Support | Product, Billing & Account Help">
+  <meta property="og:description" content="Contact NanoAgent for product, account, billing, privacy, or business support.">
+  <meta property="og:url" content="https://nanoagent.app/support">
   <meta property="og:image" content="https://nanoagent.app/images/nanoagent_hero.jpg">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="/src/style.css">
@@ -33,7 +33,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/#products">AI Products</a></li>
         <li><a href="/about.html">About Us</a></li>
-        <li><a href="/support.html" class="active">Support</a></li>
+        <li><a href="/support" class="active" aria-current="page">Support</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -48,101 +48,99 @@
   <!-- Support Header & Content -->
   <main class="legal-page">
     <div class="container">
-      <div class="legal-header" style="text-align: center; border: none; margin-bottom: 2rem;">
-        <span class="section-badge">Developer & Customer Help Desk</span>
-        <h1 class="section-title" style="font-size: 2.8rem;">Technical Support Portal</h1>
-        <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Official Technical Support for NanoAgent LLC (nanoagent.app) AI SaaS Platform & Apple Ecosystem Applications.</p>
+      <div class="legal-header support-header">
+        <h1 class="section-title">NanoAgent Support</h1>
+        <p class="section-subtitle">Get help with a NanoAgent product, account, billing issue, or privacy request.</p>
+        <a class="btn btn-primary" href="mailto:support@nanoagent.app">Email support</a>
       </div>
 
-      <!-- System Status Bar -->
-      <div style="background: rgba(16, 22, 47, 0.7); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem 2rem; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-        <div style="display: flex; align-items: center; gap: 0.8rem;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
-          <strong style="color: white; font-size: 1.05rem;">All AI SaaS Systems Operational (99.99% SLA)</strong>
-        </div>
-        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-          <span>NanoVision Image API: <strong style="color: #10b981;">Online</strong></span>
-          <span>NanoFrame Video API: <strong style="color: #10b981;">Online</strong></span>
-          <span>NanoVoice Audio API: <strong style="color: #10b981;">Online</strong></span>
-        </div>
-      </div>
+      <section class="support-checklist" aria-labelledby="support-checklist-title">
+        <h2 id="support-checklist-title">Help us understand the issue</h2>
+        <ul>
+          <li><strong>Product:</strong> tell us which NanoAgent product or website you were using.</li>
+          <li><strong>What happened:</strong> include the steps, expected result, actual result, and exact error text.</li>
+          <li><strong>Device:</strong> add your operating system, browser or app version, and approximate time of the issue.</li>
+        </ul>
+        <p>Never send a password or full payment-card number.</p>
+      </section>
 
       <div class="support-grid">
         <!-- Contact Form -->
         <div class="contact-card">
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Submit Support Ticket</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Have a question regarding our AI SaaS APIs, Apple Developer SDK, or account billing? Submit a ticket below.</p>
+          <h2>Prepare an email to support</h2>
+          <p class="support-copy">Complete the fields below and we'll open a pre-addressed draft in your email app.</p>
           
           <form id="support-form">
             <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" class="form-control" placeholder="e.g. Alex Mercer" required />
+              <label for="support-name">Your name</label>
+              <input id="support-name" name="name" type="text" class="form-control" autocomplete="name" required />
             </div>
 
             <div class="form-group">
-              <label>Contact Email</label>
-              <input type="email" class="form-control" placeholder="e.g. developer@company.com" required />
+              <label for="support-email">Contact email</label>
+              <input id="support-email" name="email" type="email" class="form-control" autocomplete="email" required />
             </div>
 
             <div class="form-group">
-              <label>Inquiry Category</label>
-              <select class="form-control">
-                <option>Apple Developer & CoreML Integration</option>
-                <option>AI SaaS API Key & Rate Limits</option>
-                <option>Billing & Subscription Support</option>
-                <option>Privacy & App Store Review Inquiry</option>
+              <label for="support-category">Topic</label>
+              <select id="support-category" name="category" class="form-control">
+                <option>Product help</option>
+                <option>Account access</option>
+                <option>Billing or payment</option>
+                <option>Privacy or data request</option>
+                <option>Business inquiry</option>
+                <option>Other</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label>Message Details</label>
-              <textarea class="form-control" rows="4" placeholder="Describe your technical inquiry or issue in detail..." required></textarea>
+              <label for="support-message">How can we help?</label>
+              <textarea id="support-message" name="message" class="form-control" rows="5" placeholder="Describe the issue and the steps that led to it." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Technical Ticket</button>
+            <button type="submit" class="btn btn-primary support-submit">Open email draft</button>
+            <p class="form-helper">Nothing is sent automatically. Review the draft in your email app, attach any useful screenshots, then send it when you're ready.</p>
           </form>
 
-          <div id="support-alert" style="display: none;"></div>
+          <div id="support-alert" class="support-alert" aria-live="polite"></div>
         </div>
 
         <!-- FAQ & Direct Contacts -->
         <div>
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-cyan);">Direct Support Channels</h3>
+            <h2>Contact NanoAgent</h2>
             
             <div style="display: flex; flex-direction: column; gap: 1rem;">
               <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-weight: 600; color: white; margin-bottom: 2px;">📧 General & Technical Support</div>
+                <div style="font-weight: 600; color: white; margin-bottom: 2px;">Product, account, billing, and privacy help</div>
                 <a href="mailto:support@nanoagent.app" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem;">support@nanoagent.app</a>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Average Response Time: &lt; 4 Hours</p>
               </div>
 
               <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-weight: 600; color: white; margin-bottom: 2px;">🍎 Apple Developer Review Concierge</div>
-                <a href="mailto:developer@nanoagent.app" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">developer@nanoagent.app</a>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">For App Store reviewers & enterprise partners</p>
+                <div style="font-weight: 600; color: white; margin-bottom: 2px;">Business and partnership inquiries</div>
+                <a href="mailto:contact@nanoagent.app" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">contact@nanoagent.app</a>
               </div>
             </div>
           </div>
 
           <!-- Frequently Asked Questions -->
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: white;">Developer FAQ</h3>
+            <h2>Frequently asked questions</h2>
             
             <div style="display: flex; flex-direction: column; gap: 1.25rem;">
               <div>
-                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: How do I integrate NanoAgent SDK with my iOS / macOS App?</h4>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: You can import our Swift Package (`NanoAgentSDK`) directly via Swift Package Manager (SPM). It supports both cloud inference endpoints and local CoreML package execution.</p>
+                <h3>What should I include in a support request?</h3>
+                <p>Include the product, your account email when relevant, steps to reproduce the issue, expected and actual results, and device or browser details.</p>
               </div>
 
               <div>
-                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: Does NanoAgent comply with Apple App Store Policy 5.1?</h4>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: Yes, strictly. We offer zero-data-retention options, end-to-end encrypted API requests, and transparent account deletion tools.</p>
+                <h3>Can you help with a billing issue?</h3>
+                <p>Yes. Choose “Billing or payment” and include the account email plus an order, invoice, or transaction reference. Do not include your full payment-card number.</p>
               </div>
 
               <div>
-                <h4 style="font-size: 0.98rem; color: var(--accent-cyan); margin-bottom: 0.3rem;">Q: What is the corporate identity for billing?</h4>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">A: All services are operated by <strong>NanoAgent LLC</strong> (registered domain <strong>nanoagent.app</strong>).</p>
+                <h3>How do I request account or data deletion?</h3>
+                <p>Email us from the address associated with the account and name the product involved. See our <a href="/privacy.html">Privacy Policy</a> for more information.</p>
               </div>
             </div>
           </div>
@@ -157,7 +155,7 @@
       <div>
         <a href="/privacy.html" style="color: var(--text-muted); margin-right: 1rem;">Privacy Policy</a>
         <a href="/terms.html" style="color: var(--text-muted); margin-right: 1rem;">Terms of Service</a>
-        <a href="/support.html" style="color: var(--accent-cyan);">Support</a>
+        <a href="/support" style="color: var(--accent-cyan);">Support</a>
       </div>
     </div>
   </footer>
